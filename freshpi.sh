@@ -4,7 +4,7 @@ source config.conf
 source freshpi_utils.sh
 
 # Ensure log directory exists
-mkdir -p $"LOG_DIR"
+mkdir -p "$LOG_DIR"
 
 exec >> "$LOG_PATH" 2>&1
 
