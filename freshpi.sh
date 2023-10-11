@@ -1,5 +1,6 @@
 #!/bin/bash
 
+source config.conf
 source freshpi_utils.sh
 
 # Update package lists
