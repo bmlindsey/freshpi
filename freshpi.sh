@@ -3,13 +3,8 @@
 source config.conf
 source freshpi_utils.sh
 
-# Ensure log directory exists
-mkdir -p "$LOG_DIR"
-
-# Redirect output
-exec 3>&1
-exec 1>>"$LOG_PATH"
-exec 2>&1
+# Setup environment
+setup
 
 # Update package lists
 info "Updating package lists"
