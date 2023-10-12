@@ -21,5 +21,5 @@ success() {
 
 # Display a failure message
 failure() {
-    echo -e "[${INFO_COLOR}x${RESET}] $1" | tee /dev/fd/3
+    echo -e "[${FAILURE_COLOR}x${RESET}] $1" | tee /dev/fd/3
 }
