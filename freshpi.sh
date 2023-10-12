@@ -29,7 +29,7 @@ fi
 info "Removing unnecessary packages"
 if apt-get -y -q autoremove; then
     success "Successfully removed unnecessary packages"
-    exit 1
 else
     failure "Failed to removed unnecessary packages"
+    exit 1
 fi
