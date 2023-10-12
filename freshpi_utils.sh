@@ -7,17 +7,6 @@ setup() {
     exec 3>&1
     exec 1>>${LOG_PATH}
     exec 2>&1
-
-    check_file_exists "config.conf"
-}
-
-# Check for the existance of a file
-check_file_exists() {
-    local file="$1"
-    if [ ! -f "$file" ]; then
-        failure "ERROR: ${file} does not exist!"
-        exit 1
-    fi
 }
 
 # Display an information message
