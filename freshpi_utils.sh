@@ -23,3 +23,8 @@ success() {
 failure() {
     echo -e "[${FAILURE_COLOR}x${RESET}] $1" | tee /dev/fd/3
 }
+
+# Display a failure message
+warning() {
+    echo -e "[${WARNING_COLOR}x${RESET}] $1" | tee /dev/fd/3
+}
