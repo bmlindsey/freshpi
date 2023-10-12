@@ -38,4 +38,4 @@ else
 fi
 
 # Completion notification
-success "Baked Fresh: Updates completed at ${DATE_FORMAT}!
+success "Baked Fresh: Updates completed at ${DATE_FORMAT}!"
