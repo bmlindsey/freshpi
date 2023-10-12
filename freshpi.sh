@@ -6,6 +6,9 @@ source freshpi_utils.sh
 # Setup environment
 setup
 
+# Startup notification
+info "Time to Cook: Beginning updates!"
+
 # Update package lists
 info "Updating package lists"
 if apt-get update; then
@@ -33,3 +36,6 @@ else
     failure "Failed to removed unnecessary packages"
     exit 1
 fi
+
+# Completion notification
+success "Baked Fresh: Your Pi is up-to-date!
