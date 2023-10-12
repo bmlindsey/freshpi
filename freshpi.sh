@@ -7,7 +7,7 @@ source freshpi_utils.sh
 setup
 
 # Startup notification
-info "Time to Cook: Beginning updates at ${DATE_FORMAT}!"
+info "Time to Cook: Beginning updates at $(date +"$DATE_FORMAT")!"
 
 # Update package lists
 info "Updating package lists"
@@ -38,4 +38,4 @@ else
 fi
 
 # Completion notification
-success "Baked Fresh: Updates completed at ${DATE_FORMAT}!"
+success "Baked Fresh: Updates completed at $(date +"$DATE_FORMAT")!"
