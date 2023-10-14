@@ -18,7 +18,6 @@ else
     exit 1
 fi
 
-
 # Upgrade installed packages
 info "Upgrading installed packages"
 if apt-get -y -q upgrade; then
