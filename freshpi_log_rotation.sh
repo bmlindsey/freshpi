@@ -27,12 +27,25 @@ count_logs() {
     echo "${log_count}"
 }
 
+purge_old_logs() {
+    local log_count=$(count_logs)
+    local logs_to_delete=$((log_count - MAX_LOG_FILES))
+
+    if (( logs_to_delete > 0 )); then
+        find "${LOG_DIR}" -type f -name "${LOG_FILE}.*.gz" | \
+        sort | \
+        head -n "${logs_to_delete}" | \
+        xargs rm -f
+    fi
+}
+
 log_rotation () {
     if file_exists "${LOG_PATH}"; then
         archive_current_log
     else
         echo "${LOG_FILE} does not exist"
     fi
+    purge_old_logs
 }
 
 #count_logs
