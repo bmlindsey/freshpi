@@ -2,8 +2,10 @@
 
 source config.conf
 
-rename_current_log() {
-    mv "${LOG_PATH}" "${LOG_PATH}.$(date +${LOG_DATE_FORMAT})"
+archive_current_log() {
+    local archive_filename="${LOG_PATH}.$(date +${LOG_DATE_FORMAT})"
+    mv "${LOG_PATH}" "${archive_filename}"
+    gzip "${archive_filename}"
 }
 
 file_exists () {
@@ -17,7 +19,7 @@ file_exists () {
 
 log_rotation () {
     if file_exists "${LOG_PATH}"; then
-        rename_current_log
+        archive_current_log
     else
         echo "${LOG_FILE} does not exist"
     fi
