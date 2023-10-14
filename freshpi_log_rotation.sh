@@ -2,12 +2,6 @@
 
 source config.conf
 
-archive_current_log() {
-    local archive_filename="${LOG_PATH}.$(date +${LOG_DATE_FORMAT})"
-    mv "${LOG_PATH}" "${archive_filename}"
-    gzip "${archive_filename}"
-}
-
 file_exists () {
     local file_path="$1"
     if [[ -f "${file_path}" ]]; then
@@ -15,6 +9,22 @@ file_exists () {
     else
         return 1
     fi
+}
+
+archive_current_log() {
+    local archive_filename="${LOG_PATH}.$(date +${LOG_DATE_FORMAT})"
+    mv "${LOG_PATH}" "${archive_filename}"
+    gzip "${archive_filename}"
+}
+
+count_logs() {
+    local log_count=$(
+        find "${LOG_DIR}" \
+            -type f \
+            -name "${LOG_FILE}.*.gz" | \
+        wc -l
+    )
+    echo "${log_count}"
 }
 
 log_rotation () {
@@ -25,4 +35,5 @@ log_rotation () {
     fi
 }
 
+#count_logs
 log_rotation
