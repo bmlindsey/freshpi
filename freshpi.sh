@@ -21,7 +21,7 @@ fi
 # Upgrade installed packages
 info "Upgrading installed packages"
 if apt-get -y -q upgrade; then
-    success "Successfully upgraded installed packkages "
+    success "Successfully upgraded installed packages "
 else
     failure "Failed to upgrade installed packages"
     exit 1
