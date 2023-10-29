@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source config.conf
+source "$(dirname "$0")/../config.conf"
 
 file_exists () {
     local file_path="$1"

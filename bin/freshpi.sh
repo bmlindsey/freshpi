@@ -1,7 +1,7 @@
 #!/bin/bash
 
-source config.conf
-source freshpi_utils.sh
+source "$(dirname "$0")/../config.conf"
+source "$(dirname "$0")/../freshpi_utils.sh"
 
 # Setup environment
 setup
