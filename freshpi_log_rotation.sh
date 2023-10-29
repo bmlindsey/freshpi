@@ -48,5 +48,4 @@ log_rotation () {
     purge_old_logs
 }
 
-#count_logs
 log_rotation
