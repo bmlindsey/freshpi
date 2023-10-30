@@ -17,6 +17,21 @@ Once you've reviewed the script and feel confident in its contents, you can inst
 curl -sSL https://raw.githubusercontent.com/bmlindsey/freshpi/main/install_freshpi.sh | sudo bash
 ```
 
+## Manual Execution
+If you wish to run FreshPi or the log rotation manually, you can do so using the following commands:
+
+### Running FreshPi
+```bash
+sudo freshpi.sh
+```
+
+### Running Log Rotation
+```bash
+sudo /opt/freshpi/freshpi_log_rotation.sh
+```
+
+Note: Make sure to use `sudo` as both scripts require root privileges to execute certain tasks.
+
 ## Automated Updates
 To automate the update process, you can schedule `freshpi.sh` to run as a task using `cron`. Here's how to set it up:
 
