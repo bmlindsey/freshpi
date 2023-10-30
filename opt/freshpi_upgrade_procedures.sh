@@ -10,6 +10,11 @@ completionNotification() {
     success "Baked Fresh: Upgrades completed at $(date +"$DATE_FORMAT")!"
 }
 
+# Ensure log directory exists
+ensureLogDirExists() {
+    mkdir -p ${LOG_DIR}
+}
+
 # Update package lists
 updatePackageLists() {
     info "Updating package lists"

@@ -11,7 +11,7 @@ source "${FRESHPI_UTILS_DIR}/freshpi_upgrade_procedures.sh"
 checkForRoot
 
 # Ensure log directory exists
-mkdir -p ${LOG_DIR}
+ensureLogDirExists
 
 # Setup environment
 setupLogStreams
