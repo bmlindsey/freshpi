@@ -42,3 +42,14 @@ removeUnnecessaryPackages() {
         exit 1
     fi
 }
+
+# Clean local repository
+cleanLocalRepository() {
+    info "Cleaning the local repository"
+    if apt-get -y -q autoclean; then
+        success "Successfully cleaned the local repsoitory"
+    else
+        failure "Failed to clean the local repsoitory"
+        exit 1
+    fi
+}

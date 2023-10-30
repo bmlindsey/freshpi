@@ -22,3 +22,4 @@ updatePackageLists
 upgradeInstalledPackages
 removeUnnecessaryPackages
 completionNotification
+cleanLocalRepository
