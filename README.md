@@ -16,3 +16,16 @@ Once you've reviewed the script and feel confident in its contents, you can inst
 ```bash
 curl -sSL https://raw.githubusercontent.com/bmlindsey/freshpi/main/install_freshpi.sh | sudo bash
 ```
+
+## Automated Updates
+To automate the update process, you can schedule `freshpi.sh` to run as a task using `cron`. Here's how to set it up:
+
+1. Open the root user's crontab with:
+```bash
+sudo crontab -e
+```
+
+2. Add the following line to schedule `freshpi.sh` to run every Saturday morning at midnight:
+```bash
+0 0 * * 6 /usr/local/bin/freshpi.sh
+```
