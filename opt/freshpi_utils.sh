@@ -1,8 +1,5 @@
 # Setup basic environment
-setup() {
-    # Ensure log directory exists
-    mkdir -p ${LOG_DIR}
-
+setupLogStreams() {
     # Redirect output
     exec 3>&1
     exec 1>>${LOG_PATH}

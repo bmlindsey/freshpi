@@ -6,9 +6,6 @@ FRESHPI_UTILS_DIR="/opt/freshpi"
 source "${FRESHPI_VARS_DIR}/config.conf"
 source "${FRESHPI_UTILS_DIR}/freshpi_utils.sh"
 
-# Setup environment
-setup
-
 file_exists () {
     local file_path="$1"
     if [[ -f "${file_path}" ]]; then

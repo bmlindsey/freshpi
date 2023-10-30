@@ -13,7 +13,10 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 # Setup environment
-setup
+setupLogStreams
+
+# Ensure log directory exists
+mkdir -p ${LOG_DIR}
 
 # Startup notification
 info "Time to Cook: Beginning updates at $(date +"$DATE_FORMAT")!"
