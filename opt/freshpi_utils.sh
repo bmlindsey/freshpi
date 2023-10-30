@@ -14,6 +14,16 @@ checkForRoot() {
     fi
 }
 
+# Check if file exists
+file_exists () {
+    local file_path="$1"
+    if [[ -f "${file_path}" ]]; then
+        return 0
+    else
+        return 1
+    fi
+}
+
 # Display an information message
 info() {
     echo -e "[${INFO_COLOR}i${RESET}] $1" | tee /dev/fd/3
