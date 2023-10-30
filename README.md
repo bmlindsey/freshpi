@@ -25,7 +25,12 @@ To automate the update process, you can schedule `freshpi.sh` to run as a task u
 sudo crontab -e
 ```
 
-2. Add the following line to schedule `freshpi.sh` to run every Saturday morning at midnight:
+2. Add the following line schedule updates to run every Saturday morning at midnight:
 ```bash
 0 0 * * 6 /usr/local/bin/freshpi.sh
+```
+
+3. Add the following line to schedule log rotations once a year on at 11:59 PM on December 31st:
+```bash
+59 23 31 12 * /opt/freshpi/freshpi_log_rotation.sh
 ```
