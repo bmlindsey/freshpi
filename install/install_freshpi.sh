@@ -32,7 +32,6 @@ cp $TEMP_INSTALL_DIR/freshpi-$VERSION/opt/* $FRESHPI_UTILS
 
 # Make the scripts executable
 chmod +x $FRESHPI_BIN/freshpi.sh
-chmod +x $FRESHPI_UTILS/freshpi_log_rotation.sh
 
 # Save the README and License to FRESHPI_DOCS
 cp $TEMP_INSTALL_DIR/freshpi-$VERSION/README.md $FRESHPI_DOCS

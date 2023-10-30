@@ -1,10 +1,7 @@
 #!/bin/bash
 
-FRESHPI_VARS_DIR="/etc/freshpi"
-FRESHPI_UTILS_DIR="/opt/freshpi"
-
-source "${FRESHPI_VARS_DIR}/config.conf"
-source "${FRESHPI_UTILS_DIR}/freshpi_utils.sh"
+source "/etc/freshpi/config.conf"
+source "/opt/freshpi/freshpi_utils.sh"
 
 file_exists () {
     local file_path="$1"
@@ -51,5 +48,3 @@ log_rotation () {
     fi
     purge_old_logs
 }
-
-log_rotation
