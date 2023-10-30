@@ -7,10 +7,7 @@ source "${FRESHPI_VARS_DIR}/config.conf"
 source "${FRESHPI_UTILS_DIR}/freshpi_utils.sh"
 
 # Check for root privileges
-if [[ $EUID -ne 0 ]]; then
-   echo "Please run this script with sudo."
-   exit 1
-fi
+checkForRoot
 
 # Setup environment
 setupLogStreams
