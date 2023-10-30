@@ -1,11 +1,8 @@
 #!/bin/bash
 
-FRESHPI_VARS_DIR="/etc/freshpi"
-FRESHPI_UTILS_DIR="/opt/freshpi"
-
-source "${FRESHPI_VARS_DIR}/config.conf"
-source "${FRESHPI_UTILS_DIR}/freshpi_utils.sh"
-source "${FRESHPI_UTILS_DIR}/freshpi_upgrade_procedures.sh"
+source "/etc/freshpi/config.conf"
+source "/opt/freshpi/freshpi_utils.sh"
+source "/opt/freshpi/freshpi_upgrade_procedures.sh"
 
 # Check for root privileges
 checkForRoot
