@@ -21,5 +21,5 @@ startupNotification
 updatePackageLists
 upgradeInstalledPackages
 removeUnnecessaryPackages
-completionNotification
 cleanLocalRepository
+completionNotification
