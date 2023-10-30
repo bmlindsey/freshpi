@@ -1,8 +1,8 @@
 #!/bin/bash
 
-FRESHPI_VARS_DIR = "/etc/freshpi"
-FRESHPI_UTILS_DIR = "/opt/freshpi"
-FRESHPI_BIN_DIR = "/usr/local/bin"
+FRESHPI_VARS_DIR="/etc/freshpi"
+FRESHPI_UTILS_DIR="/opt/freshpi"
+FRESHPI_BIN_DIR="/usr/local/bin"
 
 # Check for root privileges
 if [[ $EUID -ne 0 ]]; then
