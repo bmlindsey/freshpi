@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define version and variables
-VERSION="0.1.1"
+VERSION="0.2.0"
 RELEASE_URL="https://github.com/bmlindsey/freshpi/archive/refs/tags/v${VERSION}.tar.gz"
 TEMP_INSTALL_DIR="/tmp/freshpi-install"
 FRESHPI_BIN="/usr/local/bin"
