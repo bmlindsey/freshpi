@@ -1,7 +1,10 @@
 #!/bin/bash
 
-source "$(dirname "$0")/../config.conf"
-source "$(dirname "$0")/../freshpi_utils.sh"
+FRESHPI_VARS_DIR = "/etc/freshpi"
+FRESHPI_UTILS_DIR = "/opt/freshpi"
+
+source "${FRESHPI_VARS_DIR}/config.conf"
+source "${FRESHPI_UTILS_DIR}/freshpi_utils.sh"
 
 # Setup environment
 setup
