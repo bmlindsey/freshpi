@@ -1,10 +1,11 @@
 # FreshPi
-**FreshPi** is a simple command line tool for Raspberry Pi maintenance. It keeps your Raspberry Pi up-to-date and includes built in logging.
+**FreshPi** is a simple command line tool for Raspberry Pi maintenance.
 
 ## Features
-- **System Updates:** Easily update software with a single command or schedule automated updates.
+- **Command Line Interface (CLI):** Options to upgrade packages, rotate logs, or display help.
+- **System Updates:** Upgrade installed packages with a single command or schedule automated updates.
 - **Logging:** Keep track of updates with built in logging.
-- **Log Rotation:** Prevent your Raspberry Pi's storage from filling up by rotating log files automatically.
+- **Log Rotation:** Prevent your Raspberry Pi's storage from filling up by rotating log files.
 
 ## Installation
 **Warning**: Piping scripts directly into `bash` from the internet can be risky. Before proceeding, it's good practice to review scripts from sources you trust.
@@ -17,20 +18,25 @@ Once you've reviewed the script and feel confident in its contents, you can inst
 curl -sSL https://raw.githubusercontent.com/bmlindsey/freshpi/main/install/install_freshpi.sh | sudo bash
 ```
 
-## Manual Execution
-If you wish to run FreshPi or the log rotation manually, you can do so using the following commands:
+## Usage
+FreshPi provides a simple command line interface. Here's how to use it
 
-### Running FreshPi
+### Display Help
+```bash
+freshpi.sh --help
+```
+
+### Upgrade Packages
 ```bash
 sudo freshpi.sh
 ```
 
-### Running Log Rotation
+### Rotate Logs
 ```bash
-sudo /opt/freshpi/freshpi_log_rotation.sh
+sudo freshpi.sh --rotate-logs
 ```
 
-Note: Make sure to use `sudo` as both scripts require root privileges to execute certain tasks.
+Note: Make sure to use `sudo` as FreshPi requires root privileges to execute certain tasks.
 
 ## Automated Updates
 To automate the update process, you can schedule `freshpi.sh` to run as a task using `cron`. Here's how to set it up:
@@ -40,12 +46,12 @@ To automate the update process, you can schedule `freshpi.sh` to run as a task u
 sudo crontab -e
 ```
 
-2. Add the following line schedule updates to run every Saturday morning at midnight:
+2. Add the following line to schedule updates to run every Saturday morning at midnight:
 ```bash
 0 0 * * 6 /usr/local/bin/freshpi.sh
 ```
 
 3. Add the following line to schedule log rotations once a year on at 11:59 PM on December 31st:
 ```bash
-59 23 31 12 * /opt/freshpi/freshpi_log_rotation.sh
+59 23 31 12 * /usr/local/bin/freshpi.sh --rotate-logs
 ```
