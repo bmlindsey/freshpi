@@ -28,4 +28,4 @@ chmod +x "${FRESHPI_BIN_DIR}/freshpi.sh"
 chmod +x "${FRESHPI_UTILS_DIR}/freshpi_log_rotation.sh"
 
 # Provide feedback to the user
-echo "FreshPi has been successfully installed!"RM 
+echo "FreshPi has been successfully installed!"
